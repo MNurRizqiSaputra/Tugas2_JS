@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jawaban Studi Kasus</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+</head>
+<body>
+    <h1>TUGAS 2 JS<br> STRUKTUR KENDALI</h1>
+    <hr>
+    <div class="center">
+        <a class="button" href="index.html">Klik untuk kembali ke soal</a>
+    </div>
+    <h2>Penyelesaian Studi Kasus Menggunakan Javascript</h2>
+    
+</body>
+</html>
+
+<script>
+    //deklarasi variabel nama pegawai, jabatan, status
+    var Nama_Pegawai = "Muhammad Nur Rizqi Saputra";
+    var Jabatan = "Manager"
+    var Status = "Menikah";
+
+    //Bagian untuk mencari kondisi if untuk gajipokok berdasarkan jabatan
+    let gajiPokok = 0;
+    if(Jabatan==="Manager"){
+        gajiPokok = 10000000;
+    } else if (jabatan === "Asisten Manager") {
+    gajiPokok = 8000000;
+    }  else if (jabatan === "Staff") { 
+        gajiPokok = 5000000;
+    }
+
+    //Deklarasi variabel tunjangan jabatan dan bpjs
+    const tunjanganJabatan = 0.1 * gajiPokok;
+    const BPJS = 0.1 * gajiPokok;
+
+    //Bagian untuk mencari kondisi if untuk tunjangankeluarga berdasarkan status
+    let tunjanganKeluarga = 0;
+    if (Status === "Menikah") {
+    tunjanganKeluarga = 0.1 * gajiPokok;
+    }
+
+    //Deklarasi variabel totalPendapatan yang berisi semua jumlah dari isi variabel yang ada
+    const totalPendapatan = gajiPokok + tunjanganJabatan + BPJS + tunjanganKeluarga;
+
+    //Bagian Console.log
+    console.log("Nama Pegawai: " + Nama_Pegawai);
+    console.log("Jabatan: " + Jabatan);
+    console.log("Status: " + Status);
+    console.log("Gaji Pokok: " + gajiPokok);
+    console.log("Tunjangan Jabatan: " + tunjanganJabatan);
+    console.log("BPJS: " + BPJS);
+    console.log("Tunjangan Keluarga: " + tunjanganKeluarga);
+    console.log("Total Pendapatan: " + totalPendapatan);
+    console.log("Jadi total pendapatan yang didapatkan oleh ", Nama_Pegawai, " selaku ", Jabatan, " berjumlah Rp.", totalPendapatan);
+
+    // Bagian untuk menampilkan isi variabel beserta keterangannya
+    document.write("<br />", "Nama Pegawai: " + Nama_Pegawai, "<br />");
+    document.write("Jabatan: " + Jabatan , "<br />");
+    document.write("Status: " + Status , "<br />");
+    document.write("<hr width='25%' color='white' align='left' >");
+    document.write("<br /> ");
+
+    document.write("Gaji Pokok: " + gajiPokok , "<br />")
+    document.write("Tunjangan Jabatan: " + tunjanganJabatan , "<br />");
+    document.write("BPJS: " + BPJS , "<br />");
+    document.write("Tunjangan Keluarga: " + tunjanganKeluarga , "<br />");
+    document.write("<hr width='25%' color='white' align='left' >");
+    document.write("<br /> ");
+
+    document.write("Total Pendapatan: " + totalPendapatan, "<br />");
+    document.write("<br /> ");
+    document.write("Jadi total pendapatan yang didapatkan oleh ", Nama_Pegawai, " selaku ", Jabatan, " berjumlah Rp.", totalPendapatan);
+    document.write("<hr width='50%' color='white' align='left' >");
+
+    document.write("<br /> ");
+    document.write("<p align='right'>", "*dapat menampilkan di console log juga" , "</p>");
+</script>
